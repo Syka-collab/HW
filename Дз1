@@ -1,0 +1,91 @@
+print('Введите количество студентов')
+N=int(input())
+print('Введите количество шаурмы')
+K=int(input())
+print('Количество целой шаурмы на одного студента:',K//N)
+print('Количество шаурмы, ушедшее в холодильник:', K%N)
+
+print('Введите трёхзначное число:')
+g=int(input())
+a=str(g//100)
+b=str(g//10%10)
+c=str(g%10)
+print(a+b+c,a+c+b,b+a+c,b+c+a,c+b+a,c+a+b)
+
+
+print('Введите время готовки')
+a=int(input())
+print('Введите время уборки')
+b=int(input())
+print('Введите время стирки')
+c=int(input())
+d=600
+e=d+a+b+c
+g=e%60
+t=e//60
+if g<10:
+    g='0'+str(g)
+while t>24:
+    t=t-24
+if t<10:
+    t='0'+str(t)
+print(t, ':', g)
+
+print('Введите пароль:')
+a=input()
+print('Введите пароль повторно:')
+b=input()
+if str(a)==str(b):
+    print('Пароль принят!')
+else:
+    print('Пароль не принят! Введённые пароли не совпадают!')
+    
+print('Введите первое число:')
+a=int(input())
+print('Введите второе число:')
+b=int(input())
+if a>b:
+    print('Наибольшее число:', a, 'Наименьшее число:', b)
+else:
+    print('Наибольшее число:', b, 'Наименьшее число:', a)
+    
+print('Введите свой возраст:')
+a=int(input())
+if a>18:
+    print('Доступ разрешён')
+else:
+    print('Доступ запрещён')
+    
+print('Введите трёхзначное число:')
+g=int(input())
+a=g//100
+b=g//10%10
+c=g%10
+if a>b and a>c:
+    print(a)
+elif b>a and b>c:
+    print(b)
+else:
+    print(c)
+    
+print('Введите целых четыре любых числа:')
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+count=0
+g=0
+if a%2>0:
+    count+=1
+    g=g+a
+if b%2>0:
+    count+=1
+    g=g+b
+if c%2>0:
+    count+=1
+    g=g+c
+if d%2>0:
+    count+=1
+    g=g+d
+print('Количество нечётных:', count, 'Сумма нечётных', g)
+    
